@@ -1,7 +1,7 @@
 <template>
   <section id="admin">
     <v-container id="admin-nav">
-      <v-toolbar flat class="mt-4 mx-4">
+      <v-toolbar flat>
         <v-toolbar-title>Website Dashboard</v-toolbar-title>
         <v-spacer></v-spacer>
         <NuxtLink to="/"> <v-icon class="mr-1">mdi-home</v-icon>Home </NuxtLink>
@@ -11,9 +11,8 @@
         </a>
       </v-toolbar>
 
-      <v-tabs center-active color="primary" class="mt-4 mx-4">
+      <v-tabs center-active color="primary" class="mt-4">
         <v-tab :nuxt="true" to="/admin">Home</v-tab>
-        <v-tab :nuxt="true" to="/admin/car"> Car </v-tab>
         <v-tab :nuxt="true" to="/admin/about"> About </v-tab>
         <v-tab :nuxt="true" to="/admin/shop"> Shop </v-tab>
         <v-tab :nuxt="true" to="/admin/news"> News </v-tab>

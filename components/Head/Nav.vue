@@ -1,12 +1,13 @@
 <template>
   <div>
     <v-app-bar
-      app
-      :elevation="24"
-      color="#0a1b53"
+      :elevation="0"
+      absolute
+      color="transparent"
       dark
       height="80"
       min-width="240"
+      class="app-bar-container"
     >
       <nuxt-link to="/">
         <Logo />
@@ -31,38 +32,25 @@
                 :key="index"
                 :nuxt="true"
                 :to="item.link"
-                class="py-4"
+                class="py-1"
                 @click.native="close()"
               >
-                <v-list-item-title class="white--text text-h4 text-center">
+                <v-list-item-title class="white--text text-h5 text-center">
                   {{ item.title }}
-                </v-list-item-title>
-              </v-list-item>
-              <v-list-item href="#contact" class="py-4" @click.native="close()">
-                <v-list-item-title class="white--text text-h4 text-center">
-                  Contact
                 </v-list-item-title>
               </v-list-item>
               <v-list-item
                 v-if="user"
                 :nuxt="true"
                 to="/admin"
-                class="py-4"
+                class="py-1"
                 @click.native="close()"
               >
-                <v-list-item-title class="white--text text-h4 text-center">
+                <v-list-item-title class="white--text text-h5 text-center">
                   Admin
                 </v-list-item-title>
               </v-list-item>
-              <v-divider></v-divider>
             </v-list>
-            <v-list-item :nuxt="true" to="/" @click.native="close()">
-              <v-list-item-content>
-                <v-list-item-title>
-                  <Logo class="mx-auto mt-2" :width="300" :height="250" />
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
           </v-col>
         </v-row>
       </v-container>
@@ -77,20 +65,52 @@ export default {
       rightDrawer: false,
       navList: [
         {
-          link: '/profile',
-          title: 'Profile',
+          link: '/about',
+          title: 'About us',
         },
         {
-          link: '/partners',
-          title: 'Partners',
+          link: '/services',
+          title: 'Services',
         },
         {
-          link: '/car',
-          title: 'The Car',
+          link: '/accounts_preperation',
+          title: 'Accounts preperation',
         },
         {
-          link: '/news',
-          title: 'News',
+          link: '/tax_returns',
+          title: 'Tax returns and self-assessment',
+        },
+        {
+          link: '/business_advice',
+          title: 'Business advice',
+        },
+        {
+          link: '/Book_keeping',
+          title: 'Book-keeping',
+        },
+        {
+          link: '/management_accounts',
+          title: 'Management accounts',
+        },
+        {
+          link: '/tax_returns',
+          title: 'Tax returns and self-assessment',
+        },
+        {
+          link: '/vat',
+          title: 'VAT',
+        },
+        {
+          link: '/payroll',
+          title: 'Payroll',
+        },
+        {
+          link: '/company_secretarial',
+          title: 'Company secretarial',
+        },
+        {
+          link: '/contact',
+          title: 'Contact',
         },
       ],
     }
@@ -115,8 +135,11 @@ export default {
   position: fixed;
 }
 .nav-container {
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100vh;
+}
+.app-bar-container {
+  z-index: 2;
 }
 </style>
