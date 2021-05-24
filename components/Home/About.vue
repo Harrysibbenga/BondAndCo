@@ -1,40 +1,75 @@
 <template>
-  <div class="white">
-    <v-container class="white py-16">
+  <div>
+    <v-img :src="require('../../assets/images/Coffee.png')">
+      <v-row class="fill-height d-none d-md-flex">
+        <v-col
+          class="
+            primary--text
+            text-md-h5
+            white
+            my-auto
+            ml-md-16
+            description-text
+          "
+          cols="12"
+        >
+          <p>
+            Bond &amp; Co is a small Bristol-based firm of Chartered Certified
+            Accountants with a commitment to add value to our clients and offer
+            a personal service. We challenge ourselves so that we bring our
+            absolute best to our clients as, for us, it not only matters what we
+            do but also how we do it, showing care and commitment to our work
+            and output.
+          </p>
+          <p>
+            We pride ourselves in bringing a wealth of experience and a
+            professional approach to our comprehensive range of accounting,
+            taxation, and business advisory services.
+          </p>
+        </v-col>
+      </v-row>
+    </v-img>
+    <v-container class="d-md-none">
       <v-row>
-        <v-col class="primary--text">
-          <h3 class="py-3">
-            Welcome to Bond &amp; Co Chartered Certified Accountants
-          </h3>
+        <v-col
+          class="
+            primary--text
+            text-md-h5
+            white
+            my-auto
+            ml-md-16
+            description-text
+            text-justify
+          "
+          cols="12"
+        >
           <p>
-            Bond &amp; Co provides advice and helps support the growth of
-            businesses across Bristol and the South West, and can deliver the
-            services you need to help take the weight of financial
-            administration off of your shoulders.
+            Bond &amp; Co is a small Bristol-based firm of Chartered Certified
+            Accountants with a commitment to add value to our clients and offer
+            a personal service. We challenge ourselves so that we bring our
+            absolute best to our clients as, for us, it not only matters what we
+            do but also how we do it, showing care and commitment to our work
+            and output.
           </p>
           <p>
-            Our services include year-end compliance, cloud accountancy
-            solutions, outsourced book-keeping, management accounts, corporate
-            taxation, self-assessment, VAT, payroll services, and business
-            advisory.
-          </p>
-          <p>
-            We offer advice and support to ambitious owner-managed businesses
-            across a range of business sectors including Media, Life Sciences,
-            Property, Hospitality &amp; Leisure, Retail, and Construction.
-          </p>
-          <p>
-            Our approach is simple; we take the time to understand our clients’
-            goals and objectives and offer bespoke compliance and advisory
-            solutions that are specifically designed to protect, enhance, and
-            deliver value to the business and its owners.
-          </p>
-          <p>
-            Why not visit us for a coffee and discuss how we can help you to
-            succeed?
+            We pride ourselves in bringing a wealth of experience and a
+            professional approach to our comprehensive range of accounting,
+            taxation, and business advisory services.
           </p>
         </v-col>
       </v-row>
     </v-container>
   </div>
 </template>
+
+<style scoped>
+.description-text {
+  opacity: 0.7;
+}
+
+@media (min-width: 960px) {
+  .description-text {
+    max-width: 600px;
+  }
+}
+</style>

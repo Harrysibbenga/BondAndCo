@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-img :src="require('../../../images/Bristol.png')" :min-height="600">
+    <v-img :src="require('../../assets/images/Bristol.png')" :min-height="600">
       <h1 class="text-center text-h3 text-md-h2 text-lg-h1 pa-10 mt-16">
         Supporting businesses in Bristol and the South West
       </h1>
@@ -10,11 +10,11 @@
         v-for="item in items"
         :key="item.id"
         :class="item.color"
-        class="py-16 text-center"
+        class="d-flex align-center text-center service-container"
         cols="6"
         lg="3"
       >
-        <h5 class="text-md-h6 my-auto">{{ item.text }}</h5>
+        <h5 class="text-h5 text-md-h4 mx-auto">{{ item.text }}</h5>
       </v-col>
     </v-row>
   </div>
@@ -50,3 +50,15 @@ export default {
   },
 }
 </script>
+
+<style lang="css">
+.service-container {
+  height: 200px;
+}
+
+@media (min-width: 1264px) {
+  .service-container {
+    height: 250px;
+  }
+}
+</style>
