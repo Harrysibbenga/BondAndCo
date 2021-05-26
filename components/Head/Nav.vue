@@ -85,16 +85,12 @@ export default {
           title: 'Business advice',
         },
         {
-          link: '/Book_keeping',
+          link: '/book_keeping',
           title: 'Book-keeping',
         },
         {
           link: '/management_accounts',
           title: 'Management accounts',
-        },
-        {
-          link: '/tax_returns',
-          title: 'Tax returns and self-assessment',
         },
         {
           link: '/vat',
