@@ -1,7 +1,12 @@
 <template>
-  <v-footer color="black" dark class="py-5">
+  <v-footer color="black" dark class="pb-5 pt-0 px-0">
+    <v-container fluid class="primary py-16">
+      <v-row>
+        <foot-contact></foot-contact>
+      </v-row>
+    </v-container>
     <v-container fluid>
-      <v-row align="center" jusify="around" class="px-5">
+      <v-row align="center" jusify="around" class="px-8">
         <v-col cols="12" md="6" lg="4" class="text-center text-lg-left">
           <p>
             Bond &amp; Co Accountants Ltd<br />
@@ -27,7 +32,3 @@
     </v-container>
   </v-footer>
 </template>
-
-<script>
-export default {}
-</script>

@@ -2,7 +2,9 @@
   <v-app dark>
     <head-nav></head-nav>
     <v-main>
-      <nuxt />
+      <v-container fluid>
+        <nuxt />
+      </v-container>
     </v-main>
     <foot></foot>
   </v-app>
@@ -12,16 +14,6 @@
 export default {
   mounted() {
     this.$store.dispatch('images/setImages')
-    this.$store.dispatch('circuit/setPosts')
-    this.$store.dispatch('posts/setPosts')
-    this.$store.dispatch('posts/setContent')
-    this.$store.dispatch('car/setContent')
-    this.$store.dispatch('calendar/setPosts')
-    this.$store.dispatch('partners/setPosts')
-    this.$store.dispatch('partners/setContent')
-    this.$store.dispatch('about/setContent')
-    this.$store.dispatch('shop/setContent')
-    this.$store.dispatch('headline/setContent')
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-img :src="require('../../assets/images/Coffee.png')">
+    <v-img id="about" :src="require('../../assets/images/Coffee.png')">
       <v-row class="fill-height d-none d-md-flex">
         <v-col
           class="

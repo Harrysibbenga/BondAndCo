@@ -13,11 +13,6 @@
 
       <v-tabs center-active color="primary" class="mt-4">
         <v-tab :nuxt="true" to="/admin">Home</v-tab>
-        <v-tab :nuxt="true" to="/admin/about"> About </v-tab>
-        <v-tab :nuxt="true" to="/admin/shop"> Shop </v-tab>
-        <v-tab :nuxt="true" to="/admin/news"> News </v-tab>
-        <v-tab :nuxt="true" to="/admin/partners"> Partners </v-tab>
-        <v-tab :nuxt="true" to="/admin/calendar"> Calendar </v-tab>
       </v-tabs>
     </v-container>
 

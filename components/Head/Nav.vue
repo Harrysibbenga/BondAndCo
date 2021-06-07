@@ -9,7 +9,7 @@
       min-width="240"
       class="app-bar-container"
     >
-      <nuxt-link to="/">
+      <nuxt-link to="/" @click.native="close()">
         <Logo />
       </nuxt-link>
 
@@ -65,11 +65,11 @@ export default {
       rightDrawer: false,
       navList: [
         {
-          link: '/about',
+          link: '/#about',
           title: 'About us',
         },
         {
-          link: '/services',
+          link: '/#services',
           title: 'Services',
         },
         {
@@ -105,7 +105,7 @@ export default {
           title: 'Company secretarial',
         },
         {
-          link: '/contact',
+          link: '#contact',
           title: 'Contact',
         },
       ],
