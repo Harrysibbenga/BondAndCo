@@ -5,14 +5,8 @@
   "Phone": {
     "description": "Auto imported from components/phone.vue"
   },
-  "FootContact": {
-    "description": "Auto imported from components/Foot/contact.vue"
-  },
-  "Foot": {
-    "description": "Auto imported from components/Foot/index.vue"
-  },
-  "HeadNav": {
-    "description": "Auto imported from components/Head/nav.vue"
+  "HomeAboutInfo": {
+    "description": "Auto imported from components/Home/about-info.vue"
   },
   "HomeAbout": {
     "description": "Auto imported from components/Home/about.vue"
@@ -44,6 +38,30 @@
   "HomeWelcome": {
     "description": "Auto imported from components/Home/welcome.vue"
   },
+  "HeadNav": {
+    "description": "Auto imported from components/Head/nav.vue"
+  },
+  "FootContact": {
+    "description": "Auto imported from components/Foot/contact.vue"
+  },
+  "Foot": {
+    "description": "Auto imported from components/Foot/index.vue"
+  },
+  "UiCalendarCard": {
+    "description": "Auto imported from components/Ui/CalendarCard.vue"
+  },
+  "UiEditor": {
+    "description": "Auto imported from components/Ui/Editor.vue"
+  },
+  "UiMessage": {
+    "description": "Auto imported from components/Ui/Message.vue"
+  },
+  "UiNavCard": {
+    "description": "Auto imported from components/Ui/NavCard.vue"
+  },
+  "UiNewsCard": {
+    "description": "Auto imported from components/Ui/NewsCard.vue"
+  },
   "ServiceBody": {
     "description": "Auto imported from components/Service/body.vue"
   },
@@ -61,5 +79,50 @@
   },
   "Legals": {
     "description": "Auto imported from components/Legals/index.vue"
+  },
+  "AdminServicesEdit": {
+    "description": "Auto imported from components/Admin/Services/edit.vue"
+  },
+  "AdminServicesUpload": {
+    "description": "Auto imported from components/Admin/Services/upload.vue"
+  },
+  "AdminCompEditPosts": {
+    "description": "Auto imported from components/Admin/Comp/EditPosts.vue"
+  },
+  "AdminCompGallery": {
+    "description": "Auto imported from components/Admin/Comp/Gallery.vue"
+  },
+  "AdminCompImageUpload": {
+    "description": "Auto imported from components/Admin/Comp/ImageUpload.vue"
+  },
+  "AdminCompQuotes": {
+    "description": "Auto imported from components/Admin/Comp/Quotes.vue"
+  },
+  "AdminCompStandardForm": {
+    "description": "Auto imported from components/Admin/Comp/StandardForm.vue"
+  },
+  "AdminModalsDelete": {
+    "description": "Auto imported from components/Admin/Modals/delete.vue"
+  },
+  "AdminModalsEdit": {
+    "description": "Auto imported from components/Admin/Modals/edit.vue"
+  },
+  "AdminModalsExists": {
+    "description": "Auto imported from components/Admin/Modals/exists.vue"
+  },
+  "AdminModalsMultiUpload": {
+    "description": "Auto imported from components/Admin/Modals/multiUpload.vue"
+  },
+  "AdminModalsSelect": {
+    "description": "Auto imported from components/Admin/Modals/select.vue"
+  },
+  "AdminModalsSelectImage": {
+    "description": "Auto imported from components/Admin/Modals/selectImage.vue"
+  },
+  "AdminModalsSelectImages": {
+    "description": "Auto imported from components/Admin/Modals/selectImages.vue"
+  },
+  "AdminModalsUploadImage": {
+    "description": "Auto imported from components/Admin/Modals/uploadImage.vue"
   }
 }

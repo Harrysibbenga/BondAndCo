@@ -10,6 +10,7 @@
 export default {
   mounted() {
     this.$store.dispatch('images/setImages')
+    this.$store.dispatch('services/setServices')
   },
 }
 </script>

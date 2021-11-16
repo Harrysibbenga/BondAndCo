@@ -1,10 +1,8 @@
 <template>
-  <v-app dark>
+  <v-app>
     <head-nav></head-nav>
     <v-main>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-main>
     <foot></foot>
   </v-app>
@@ -14,6 +12,7 @@
 export default {
   mounted() {
     this.$store.dispatch('images/setImages')
+    this.$store.dispatch('services/setServices')
   },
 }
 </script>

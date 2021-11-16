@@ -4,7 +4,6 @@ import { imgCol, storage } from '@/services/firebase'
 export const state = () => ({
   image: {},
   images: [],
-  imagesType: [],
   uploadMsg: {},
 })
 
@@ -22,8 +21,7 @@ export const mutations = {
 
 export const getters = {
   message: (state) => state.uploadMsg,
-  imageImages: (state) => state.images,
-  imagesType: (state) => state.imagesType,
+  allImages: (state) => state.images,
 }
 
 export const actions = {
@@ -41,14 +39,7 @@ export const actions = {
   },
   uploadImage({ commit }, payload) {
     return new Promise((resolve, reject) => {
-      let type, collection
-
-      if (payload.type === 'image') {
-        type = payload.type
-        collection = imgCol
-      }
-
-      const storageRef = storage.ref(type + '/' + payload.file.name)
+      const storageRef = storage.ref('images' + '/' + payload.file.name)
       const uploadTask = storageRef.put(payload.file)
 
       uploadTask.on(
@@ -62,17 +53,16 @@ export const actions = {
         () => {
           // Handle successful uploads on complete
           uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-            collection
+            imgCol
               .add({
                 name: payload.file.name,
                 createdOn: new Date(),
                 url: downloadURL,
                 alt: payload.alt,
-                type: payload.type,
               })
               .then((doc) => {
                 const id = doc.id
-                collection
+                imgCol
                   .doc(id)
                   .get()
                   .then((doc) => {
@@ -92,7 +82,7 @@ export const actions = {
                   message: err.message,
                 }
                 commit('SET_MSG', uploadMsg)
-                reject()
+                reject(err)
               })
           })
         }
@@ -121,7 +111,6 @@ export const actions = {
                 createdOn: new Date(),
                 url: downloadURL,
                 alt: payload.alt,
-                type: 'image',
               })
               .then((doc) => {
                 const id = doc.id

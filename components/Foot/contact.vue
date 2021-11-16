@@ -1,139 +1,159 @@
 <template>
-  <v-container id="contact" class="primary">
+  <div id="contact" class="transparent">
     <h2 class="text-h2 text-center pb-5">Contact Us</h2>
     <form @submit.prevent="submit">
-      <v-row align="center">
-        <v-col cols="12" md="6">
-          <label for="fname">First name</label>
-          <v-text-field
-            v-model="fname"
-            :error-messages="fnameErrors"
-            :counter="15"
-            light
-            name="fname"
-            class="white"
-            color="black"
-            required
-            @input="$v.fname.$touch()"
-            @blur="$v.fname.$touch()"
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="6">
-          <label for="lname">Last name</label>
-          <v-text-field
-            v-model="lname"
-            :error-messages="lnameErrors"
-            :counter="15"
-            light
-            name="lname"
-            class="white"
-            color="black"
-            required
-            @input="$v.lname.$touch()"
-            @blur="$v.lname.$touch()"
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12">
-          <label for="email">Email</label>
-          <v-text-field
-            v-model="email"
-            :error-messages="emailErrors"
-            light
-            name="email"
-            class="white"
-            color="black"
-            required
-            @input="$v.email.$touch()"
-            @blur="$v.email.$touch()"
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" class="px-6">
-          <v-radio-group
-            v-model="subject"
-            :error-messages="subjectErrors"
-            required
-            name="subject"
-            @change="$v.subject.$touch()"
-            @blur="$v.subject.$touch()"
-          >
-            <v-row align="center" justify="space-between" class="pb-5">
-              <v-radio
-                label="Accounts preparation"
-                value="Accounts preparation"
-                color="white"
-              ></v-radio>
-              <v-radio
-                label="Tax returns"
-                color="white"
-                value="Tax returns"
-              ></v-radio>
-              <v-radio
-                label="Business advice"
-                value="Business advice"
-                color="white"
-              ></v-radio>
-              <v-radio
-                label="Book keeping"
-                color="white"
-                value="Book keeping"
-              ></v-radio>
-            </v-row>
-            <v-row align="center" justify="space-between">
-              <v-radio
-                label="Management accounts"
-                value="Management accounts"
-                color="white"
-              ></v-radio>
-              <v-radio label="VAT" color="white" value="VAT"></v-radio>
-              <v-radio label="Payroll" color="white" value="Payroll"></v-radio>
-              <v-radio
-                label="Company Secretarial"
-                value="Company Secretarial"
-                color="white"
-              ></v-radio>
-            </v-row>
-          </v-radio-group>
-        </v-col>
-        <v-col cols="12">
-          <label for="message">Message</label>
-          <v-textarea
-            v-model="message"
-            name="message"
-            light
-            :error-messages="messageErrors"
-            color="black"
-            class="white"
-            clearable
-            required
-            @input="$v.message.$touch()"
-            @blur="$v.message.$touch()"
-          ></v-textarea>
-        </v-col>
-        <v-col cols="12" class="text-center">
-          <v-btn class="mr-4 white black--text" type="submit"> submit </v-btn>
-          <v-btn class="mr-4 white black--text" @click.native="clear">
-            clear
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-alert v-if="msg.message" :type="msg.type" class="mt-6">
+      <v-container>
+        <v-row align="center">
+          <v-col cols="12" md="6">
+            <label for="fname">First name</label>
+            <v-text-field
+              v-model="fname"
+              :error-messages="fnameErrors"
+              light
+              name="fname"
+              class="white"
+              color="black"
+              required
+              @input="$v.fname.$touch()"
+              @blur="$v.fname.$touch()"
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" md="6">
+            <label for="lname">Last name</label>
+            <v-text-field
+              v-model="lname"
+              :error-messages="lnameErrors"
+              light
+              name="lname"
+              class="white"
+              color="black"
+              required
+              @input="$v.lname.$touch()"
+              @blur="$v.lname.$touch()"
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12">
+            <label for="email">Email</label>
+            <v-text-field
+              v-model="email"
+              :error-messages="emailErrors"
+              light
+              name="email"
+              class="white"
+              color="black"
+              required
+              @input="$v.email.$touch()"
+              @blur="$v.email.$touch()"
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" class="px-6">
+            <v-radio-group
+              v-model="subject"
+              :error-messages="subjectErrors"
+              required
+              name="subject"
+              @change="$v.subject.$touch()"
+              @blur="$v.subject.$touch()"
+            >
+              <v-row align="center" class="pb-5">
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Accounts preparation"
+                    value="Accounts preparation"
+                    color="white"
+                  ></v-radio>
+                </v-col>
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Tax returns"
+                    color="white"
+                    value="Tax returns"
+                  ></v-radio>
+                </v-col>
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Business advice"
+                    value="Business advice"
+                    color="white"
+                  ></v-radio>
+                </v-col>
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Book keeping"
+                    color="white"
+                    value="Book keeping"
+                  ></v-radio>
+                </v-col>
+              </v-row>
+              <v-row align="center">
+                <v-col cols="6" md="3">
+                  <v-radio label="VAT" color="white" value="VAT"></v-radio>
+                </v-col>
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Management accounts"
+                    value="Management accounts"
+                    color="white"
+                  ></v-radio>
+                </v-col>
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Payroll"
+                    color="white"
+                    value="Payroll"
+                  ></v-radio>
+                </v-col>
+                <v-col cols="6" md="3">
+                  <v-radio
+                    label="Company Secretarial"
+                    value="Company Secretarial"
+                    color="white"
+                  ></v-radio>
+                </v-col>
+              </v-row>
+            </v-radio-group>
+          </v-col>
+          <v-col cols="12">
+            <label for="message">Message</label>
+            <v-textarea
+              v-model="message"
+              name="message"
+              light
+              :error-messages="messageErrors"
+              color="black"
+              class="white"
+              clearable
+              required
+              @input="$v.message.$touch()"
+              @blur="$v.message.$touch()"
+            ></v-textarea>
+          </v-col>
+          <v-col cols="12" class="text-center">
+            <v-btn class="mr-4 white black--text" type="submit"> submit </v-btn>
+            <v-btn class="mr-4 white black--text" @click.native="clear">
+              clear
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+      <v-alert v-if="msg.message" :type="msg.type" class="mt-6" width="500px">
         {{ msg.message }}
       </v-alert>
     </form>
-  </v-container>
+  </div>
 </template>
 
 <script>
 import { validationMixin } from 'vuelidate'
-import { required, maxLength, email } from 'vuelidate/lib/validators'
+import { required, email } from 'vuelidate/lib/validators'
 import emailjs from 'emailjs-com'
 
 export default {
   mixins: [validationMixin],
 
   validations: {
-    fname: { required, maxLength: maxLength(15) },
-    lname: { required, maxLength: maxLength(15) },
+    fname: { required },
+    lname: { required },
     email: { required, email },
     message: { required },
     subject: {
@@ -166,16 +186,12 @@ export default {
     fnameErrors() {
       const errors = []
       if (!this.$v.fname.$dirty) return errors
-      !this.$v.fname.maxLength &&
-        errors.push('First name must be at most 15 characters long')
       !this.$v.fname.required && errors.push('First name is required.')
       return errors
     },
     lnameErrors() {
       const errors = []
       if (!this.$v.lname.$dirty) return errors
-      !this.$v.lname.maxLength &&
-        errors.push('Last name must be at most 15 characters long')
       !this.$v.lname.required && errors.push('Last name is required.')
       return errors
     },
@@ -214,7 +230,7 @@ export default {
       emailjs
         .sendForm(
           'service_mqk22oq',
-          'template_ha88ftm',
+          'bnc_template_489730',
           e.target,
           'user_nzDfhN2MWfSPkCKqEp7Td'
         )

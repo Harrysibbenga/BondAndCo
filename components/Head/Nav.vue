@@ -2,41 +2,58 @@
   <div>
     <v-app-bar
       :elevation="0"
-      absolute
       color="transparent"
       dark
-      height="80"
+      height="100"
       min-width="240"
       class="app-bar-container"
     >
       <nuxt-link to="/" @click.native="close()">
-        <Logo />
+        <logo :width="width" :height="height" />
       </nuxt-link>
 
       <v-spacer />
       <v-app-bar-nav-icon
+        class="ml-1 icon-size"
         @click.stop="rightDrawer = !rightDrawer"
-      ></v-app-bar-nav-icon>
+      >
+        <v-icon x-large> mdi-menu </v-icon>
+      </v-app-bar-nav-icon>
     </v-app-bar>
     <v-expand-transition>
       <v-container
         v-show="rightDrawer"
         fluid
-        class="position-fixed fill-height nav-container pa-0 primary"
+        class="position-fixed fill-height nav-container pa-0 py-5 primary"
       >
         <v-row>
           <v-col class="my-auto" cols="12">
             <v-list class="primary">
               <v-list-item
-                v-for="(item, index) in navList"
+                class="py-1"
+                :nuxt="true"
+                to="/about"
+                @click.native="close()"
+              >
+                <v-list-item-title class="white--text text-h5 text-center">
+                  About us
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item
+                v-for="(item, index) in servList"
                 :key="index"
                 :nuxt="true"
-                :to="item.link"
+                :to="{ name: 'services-slug', params: { slug: item.slug } }"
                 class="py-1"
                 @click.native="close()"
               >
                 <v-list-item-title class="white--text text-h5 text-center">
                   {{ item.title }}
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item class="py-1" href="#contact" @click.native="close()">
+                <v-list-item-title class="white--text text-h5 text-center">
+                  Contact
                 </v-list-item-title>
               </v-list-item>
               <v-list-item
@@ -63,57 +80,34 @@ export default {
   data() {
     return {
       rightDrawer: false,
-      navList: [
-        {
-          link: '/#about',
-          title: 'About us',
-        },
-        {
-          link: '/#services',
-          title: 'Services',
-        },
-        {
-          link: '/accounts_preperation',
-          title: 'Accounts preperation',
-        },
-        {
-          link: '/tax_returns',
-          title: 'Tax returns and self-assessment',
-        },
-        {
-          link: '/business_advice',
-          title: 'Business advice',
-        },
-        {
-          link: '/book_keeping',
-          title: 'Book-keeping',
-        },
-        {
-          link: '/management_accounts',
-          title: 'Management accounts',
-        },
-        {
-          link: '/vat',
-          title: 'VAT',
-        },
-        {
-          link: '/payroll',
-          title: 'Payroll',
-        },
-        {
-          link: '/company_secretarial',
-          title: 'Company secretarial',
-        },
-        {
-          link: '#contact',
-          title: 'Contact',
-        },
-      ],
     }
   },
   computed: {
     user() {
       return this.$store.getters['users/user']
+    },
+    servList() {
+      return this.$store.getters['services/services']
+    },
+    width() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 200
+        case 'sm':
+          return 200
+        default:
+          return 250
+      }
+    },
+    height() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 80
+        case 'sm':
+          return 80
+        default:
+          return 100
+      }
     },
   },
   methods: {
@@ -137,5 +131,10 @@ export default {
 }
 .app-bar-container {
   z-index: 2;
+  position: absolute;
+}
+.icon-size {
+  width: 50px !important;
+  height: 50px !important;
 }
 </style>

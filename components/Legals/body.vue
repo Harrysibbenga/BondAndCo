@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="white">
     <v-row>
-      <v-col cols="10" class="secondary thickness"> </v-col>
+      <v-col cols="10" class="secondary thickness gradient-serv"> </v-col>
       <v-col cols="2" class="white"> </v-col>
     </v-row>
     <v-container class="py-16 px-lg-10 my-16">
@@ -19,7 +19,7 @@
     </v-container>
     <v-row>
       <v-col cols="2" class="white thickness"> </v-col>
-      <v-col cols="10" class="secondary"></v-col>
+      <v-col cols="10" class="secondary gradient-serv"></v-col>
     </v-row>
   </v-container>
 </template>
@@ -37,6 +37,6 @@ export default {
 
 <style>
 .thickness {
-  height: 50px;
+  height: 65px;
 }
 </style>

@@ -1,93 +1,52 @@
 [
   {
-    "name": "accounts_preperation",
-    "path": "/accounts_preperation",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/accounts_preperation.vue",
-    "chunkName": "pages/accounts_preperation",
-    "_name": "_2f83dda0"
+    "name": "about",
+    "path": "/about",
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/about.vue",
+    "chunkName": "pages/about"
   },
   {
     "name": "admin",
     "path": "/admin",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/admin.vue",
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/admin.vue",
     "chunkName": "pages/admin",
-    "_name": "_92d44b5e"
-  },
-  {
-    "name": "book_keeping",
-    "path": "/book_keeping",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/book_keeping.vue",
-    "chunkName": "pages/book_keeping",
-    "_name": "_198212d5"
-  },
-  {
-    "name": "business_advice",
-    "path": "/business_advice",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/business_advice.vue",
-    "chunkName": "pages/business_advice",
-    "_name": "_70098e4e"
-  },
-  {
-    "name": "company_secretarial",
-    "path": "/company_secretarial",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/company_secretarial.vue",
-    "chunkName": "pages/company_secretarial",
-    "_name": "_368c7b93"
+    "children": [
+      {
+        "name": "admin-services",
+        "path": "services",
+        "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/admin/services.vue",
+        "chunkName": "pages/admin/services"
+      }
+    ]
   },
   {
     "name": "disclaimer",
     "path": "/disclaimer",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/disclaimer.vue",
-    "chunkName": "pages/disclaimer",
-    "_name": "_61fc6109"
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/disclaimer.vue",
+    "chunkName": "pages/disclaimer"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_4ece296b"
-  },
-  {
-    "name": "management_accounts",
-    "path": "/management_accounts",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/management_accounts.vue",
-    "chunkName": "pages/management_accounts",
-    "_name": "_0501f738"
-  },
-  {
-    "name": "payroll",
-    "path": "/payroll",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/payroll.vue",
-    "chunkName": "pages/payroll",
-    "_name": "_7d3846a7"
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/login.vue",
+    "chunkName": "pages/login"
   },
   {
     "name": "privacy_policy",
     "path": "/privacy_policy",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/privacy_policy.vue",
-    "chunkName": "pages/privacy_policy",
-    "_name": "_3eea0192"
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/privacy_policy.vue",
+    "chunkName": "pages/privacy_policy"
   },
   {
-    "name": "tax_returns",
-    "path": "/tax_returns",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/tax_returns.vue",
-    "chunkName": "pages/tax_returns",
-    "_name": "_e1b3f79e"
-  },
-  {
-    "name": "vat",
-    "path": "/vat",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/vat.vue",
-    "chunkName": "pages/vat",
-    "_name": "_7917d8aa"
+    "name": "services-slug",
+    "path": "/services/:slug?",
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/services/_slug.vue",
+    "chunkName": "pages/services/_slug"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/harry/My_Documents/Websites/Bond&Co/bondandco/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_f5b2f358"
+    "component": "/Volumes/Extreme SSD/Websites/Bond&Co/bondandco/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]

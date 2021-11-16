@@ -12,7 +12,7 @@ export default {
     return {
       legals: {
         head: {
-          url: 'privacy_policy.png',
+          url: 'privacy_policy.jpg',
           title: 'Privacy Policy',
         },
         body: {

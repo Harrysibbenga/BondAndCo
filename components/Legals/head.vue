@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-img :src="require('../../assets/images/' + head.url)" :min-height="800">
+    <v-img :src="require('../../assets/images/' + head.url)" height="800">
       <v-row align="end" justify="end" class="row-height">
-        <div class="black title-container pa-5">
-          <h1 class="text-h3 text-md-h1 white--text text-right">
+        <div class="black title-container pa-5 mr-md-5">
+          <h1 class="text-h3 text-md-h2 white--text text-right mr-md-2">
             {{ head.title }}
           </h1>
           <v-row align="end" justify="end" class="py-5 pt-10 pr-3">

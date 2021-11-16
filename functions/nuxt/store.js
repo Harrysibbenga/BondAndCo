@@ -16,6 +16,7 @@ let store = {};
   store.modules = store.modules || {}
 
   resolveStoreModules(require('../store/users/index.js'), 'users/index.js')
+  resolveStoreModules(require('../store/services/index.js'), 'services/index.js')
   resolveStoreModules(require('../store/images/index.js'), 'images/index.js')
   resolveStoreModules(require('../store/global/index.js'), 'global/index.js')
   resolveStoreModules(require('../store/about/index.js'), 'about/index.js')

@@ -13,9 +13,9 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_042f6c98 from 'nuxt_plugin_plugin_042f6c98' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_70e676ba from 'nuxt_plugin_plugin_70e676ba' // Source: ./vuetify/plugin.js (mode: 'all')
-import nuxt_plugin_axios_258462ca from 'nuxt_plugin_axios_258462ca' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_7a7dd8be from 'nuxt_plugin_plugin_7a7dd8be' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_6602bbed from 'nuxt_plugin_plugin_6602bbed' // Source: ./vuetify/plugin.js (mode: 'all')
+import nuxt_plugin_axios_5f32e837 from 'nuxt_plugin_axios_5f32e837' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_main_8a573caa from 'nuxt_plugin_main_8a573caa' // Source: ../assets/scss/main.scss (mode: 'all')
 
 // Component: <ClientOnly>
@@ -84,7 +84,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"titleTemplate":"%s - bondandco","title":"bondandco","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"style":[],"script":[]},
+    head: {"titleTemplate":"%s","title":"Bond & Co Accountants","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"robots","content":"index, folow"},{"hid":"description","name":"description","content":"Bond & Co provides advice and helps support the growth of businesses across Bristol and the South West, and can deliver the services you need to help take the weight of financial administration off of your shoulders."},{"property":"og:type","content":"website"},{"property":"og:title","content":"Bond & Co Accounting specialists"},{"property":"og:image","content":"https:\u002F\u002Fbondaccountants.co.uk\u002FBond_logo.png"},{"property":"og:description","content":"Bond & Co provides advice and helps support the growth of businesses across Bristol and the South West, and can deliver the services you need to help take the weight of financial administration off of your shoulders."},{"property":"og:url","content":"https:\u002F\u002Fbondaccountants.co.uk"},{"property":"og:site_name","content":"Bond & Co Accountants"},{"property":"twitter:title","content":"Bond & Co Accounting specialists"},{"property":"twitter:description","content":"Bond & Co provides advice and helps support the growth of businesses across Bristol and the South West, and can deliver the services you need to help take the weight of financial administration off of your shoulders."},{"property":"twitter:image","content":"https:\u002F\u002Fbondaccountants.co.uk\u002FBond_logo.png"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"canonical","href":"http:\u002F\u002Fbondaccountants.co.uk"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"script":[{"src":"https:\u002F\u002Fwww.googletagmanager.com\u002Fgtag\u002Fjs?id=G-RRHTDQE2MF","async":true},{"hid":"gtag","innerHTML":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n\n          gtag('config', 'G-RRHTDQE2MF');\n        ","type":"text\u002Fjavascript","charset":"utf-8"}],"style":[]},
 
     store,
     router,
@@ -213,16 +213,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_042f6c98 === 'function') {
-    await nuxt_plugin_plugin_042f6c98(app.context, inject)
+  if (typeof nuxt_plugin_plugin_7a7dd8be === 'function') {
+    await nuxt_plugin_plugin_7a7dd8be(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_70e676ba === 'function') {
-    await nuxt_plugin_plugin_70e676ba(app.context, inject)
+  if (typeof nuxt_plugin_plugin_6602bbed === 'function') {
+    await nuxt_plugin_plugin_6602bbed(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_258462ca === 'function') {
-    await nuxt_plugin_axios_258462ca(app.context, inject)
+  if (typeof nuxt_plugin_axios_5f32e837 === 'function') {
+    await nuxt_plugin_axios_5f32e837(app.context, inject)
   }
 
   if (typeof nuxt_plugin_main_8a573caa === 'function') {

@@ -1,3 +1,18 @@
 html {
+  scroll-behavior: auto;
   scroll-behavior: smooth;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6587009803921569) 13%, rgba(0, 0, 0, 0) 100%);
+}
+
+.gradient-serv {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5018382352941176) 0%, rgba(0, 0, 0, 0.35898109243697474) 11%, rgba(0, 0, 0, 0) 50%);
 }

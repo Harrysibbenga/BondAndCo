@@ -4,19 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2f83dda0 = () => interopDefault(import('../pages/accounts_preperation.vue' /* webpackChunkName: "pages/accounts_preperation" */))
-const _92d44b5e = () => interopDefault(import('../pages/admin.vue' /* webpackChunkName: "pages/admin" */))
-const _198212d5 = () => interopDefault(import('../pages/book_keeping.vue' /* webpackChunkName: "pages/book_keeping" */))
-const _70098e4e = () => interopDefault(import('../pages/business_advice.vue' /* webpackChunkName: "pages/business_advice" */))
-const _368c7b93 = () => interopDefault(import('../pages/company_secretarial.vue' /* webpackChunkName: "pages/company_secretarial" */))
-const _61fc6109 = () => interopDefault(import('../pages/disclaimer.vue' /* webpackChunkName: "pages/disclaimer" */))
-const _4ece296b = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _0501f738 = () => interopDefault(import('../pages/management_accounts.vue' /* webpackChunkName: "pages/management_accounts" */))
-const _7d3846a7 = () => interopDefault(import('../pages/payroll.vue' /* webpackChunkName: "pages/payroll" */))
-const _3eea0192 = () => interopDefault(import('../pages/privacy_policy.vue' /* webpackChunkName: "pages/privacy_policy" */))
-const _e1b3f79e = () => interopDefault(import('../pages/tax_returns.vue' /* webpackChunkName: "pages/tax_returns" */))
-const _7917d8aa = () => interopDefault(import('../pages/vat.vue' /* webpackChunkName: "pages/vat" */))
-const _f5b2f358 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _6190d3c2 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _9a8ffaf8 = () => interopDefault(import('../pages/admin.vue' /* webpackChunkName: "pages/admin" */))
+const _709a6f39 = () => interopDefault(import('../pages/admin/services.vue' /* webpackChunkName: "pages/admin/services" */))
+const _43fa60b6 = () => interopDefault(import('../pages/disclaimer.vue' /* webpackChunkName: "pages/disclaimer" */))
+const _4af0519e = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _e2113f38 = () => interopDefault(import('../pages/privacy_policy.vue' /* webpackChunkName: "pages/privacy_policy" */))
+const _11c0bd34 = () => interopDefault(import('../pages/services/_slug.vue' /* webpackChunkName: "pages/services/_slug" */))
+const _fd6ea2f2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -30,56 +25,37 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/accounts_preperation",
-    component: _2f83dda0,
-    name: "accounts_preperation"
+    path: "/about",
+    component: _6190d3c2,
+    name: "about"
   }, {
     path: "/admin",
-    component: _92d44b5e,
-    name: "admin"
-  }, {
-    path: "/book_keeping",
-    component: _198212d5,
-    name: "book_keeping"
-  }, {
-    path: "/business_advice",
-    component: _70098e4e,
-    name: "business_advice"
-  }, {
-    path: "/company_secretarial",
-    component: _368c7b93,
-    name: "company_secretarial"
+    component: _9a8ffaf8,
+    name: "admin",
+    children: [{
+      path: "services",
+      component: _709a6f39,
+      name: "admin-services"
+    }]
   }, {
     path: "/disclaimer",
-    component: _61fc6109,
+    component: _43fa60b6,
     name: "disclaimer"
   }, {
     path: "/login",
-    component: _4ece296b,
+    component: _4af0519e,
     name: "login"
   }, {
-    path: "/management_accounts",
-    component: _0501f738,
-    name: "management_accounts"
-  }, {
-    path: "/payroll",
-    component: _7d3846a7,
-    name: "payroll"
-  }, {
     path: "/privacy_policy",
-    component: _3eea0192,
+    component: _e2113f38,
     name: "privacy_policy"
   }, {
-    path: "/tax_returns",
-    component: _e1b3f79e,
-    name: "tax_returns"
-  }, {
-    path: "/vat",
-    component: _7917d8aa,
-    name: "vat"
+    path: "/services/:slug?",
+    component: _11c0bd34,
+    name: "services-slug"
   }, {
     path: "/",
-    component: _f5b2f358,
+    component: _fd6ea2f2,
     name: "index"
   }],
 

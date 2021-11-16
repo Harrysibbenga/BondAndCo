@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="12">
-        <v-card color="primary" tile class="pa-10">
+        <v-card color="primary gradient-serv" tile class="pa-10">
           <div
             class="
               d-flex
@@ -23,17 +23,27 @@
                 justify="space-around"
                 class="text-center mx-auto justify-center"
               >
-                <v-btn fab small color="white"
+                <v-btn
+                  fab
+                  small
+                  color="white"
+                  href="https://www.linkedin.com/in/polly-bond-690a7830/"
+                  target="_blank"
                   ><v-icon class="primary--text">mdi-linkedin</v-icon></v-btn
                 >
-                <v-btn fab small color="white"
+                <v-btn
+                  fab
+                  small
+                  color="white"
+                  href="https://www.facebook.com/BondandCoAccountants"
+                  target="_blank"
                   ><v-icon class="primary--text">mdi-facebook</v-icon></v-btn
                 >
               </v-row>
             </div>
             <div>
               <v-card-title class="text-h5">Meet the team</v-card-title>
-              <v-card-subtitle class="text-h6"
+              <v-card-subtitle class="text-h5"
                 >Polly Bond, FCCA (Director)</v-card-subtitle
               >
               <v-card-text>
